@@ -44,9 +44,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ? Center(
                   child: showLoader
                       ? CircularProgressIndicator()
-                      : Text(
-                          'Search wikipedia...',
-                          style: TextStyle(fontSize: 20.0),
+                      : Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Search wikipedia...',
+                              style: TextStyle(fontSize: 20.0, color: Colors.black),
+                            ),
+                            Text(
+                              'For search tap above search icon',
+                              style: TextStyle(fontSize: 16.0, color: Colors.grey),
+                            ),
+                          ],
                         ),
                 )
               : Container(
